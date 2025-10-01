@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ENCODER</title>
+  <link rel="stylesheet" href="../basic-logic-gates/gates.css">
+  <link rel="stylesheet" href="combinational.css">
+  <style>
+    .label { margin-top: 16px; }
+    .section { margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <h2>ENCODER</h2>
+
+  <div class="section">
+    <h3>8:3 Encoder</h3>
+    <div class="circuit">
+      <!-- Inputs (assume single-hot) -->
+      <input type="checkbox" id="enc83-d0">
+      <label for="enc83-d0">D0</label>
+
+      <input type="checkbox" id="enc83-d1">
+      <label for="enc83-d1">D1</label>
+
+      <input type="checkbox" id="enc83-d2">
+      <label for="enc83-d2">D2</label>
+
+      <input type="checkbox" id="enc83-d3">
+      <label for="enc83-d3">D3</label>
+
+      <input type="checkbox" id="enc83-d4">
+      <label for="enc83-d4">D4</label>
+
+      <input type="checkbox" id="enc83-d5">
+      <label for="enc83-d5">D5</label>
+
+      <input type="checkbox" id="enc83-d6">
+      <label for="enc83-d6">D6</label>
+
+      <input type="checkbox" id="enc83-d7">
+      <label for="enc83-d7">D7</label>
+
+      <!-- Outputs -->
+      <div class="label">A2</div>
+      <div class="lamp gate-enc83-a2"></div>
+
+      <div class="label">A1</div>
+      <div class="lamp gate-enc83-a1"></div>
+
+      <div class="label">A0</div>
+      <div class="lamp gate-enc83-a0"></div>
+    </div>
+  </div>
+</body>
+</html>
+

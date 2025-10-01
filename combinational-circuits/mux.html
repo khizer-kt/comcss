@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MUX</title>
+  <link rel="stylesheet" href="../basic-logic-gates/gates.css">
+  <link rel="stylesheet" href="combinational.css">
+  <style>
+    .label { margin-top: 16px; }
+    .section { margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <h2>MUX</h2>
+
+  <div class="section">
+    <h3>2:1 MUX</h3>
+    <div class="circuit">
+      <!-- Select FIRST -->
+      <input type="checkbox" id="mux2-s">
+      <label for="mux2-s">Select (S)</label>
+
+      <!-- Then data inputs -->
+      <input type="checkbox" id="mux2-d0">
+      <label for="mux2-d0">D0</label>
+
+      <input type="checkbox" id="mux2-d1">
+      <label for="mux2-d1">D1</label>
+
+      <!-- Then output -->
+      <div class="label">OUT</div>
+      <div class="lamp gate-mux2-out"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>4:1 MUX</h3>
+    <div class="circuit">
+      <!-- Selects FIRST -->
+       <!-- The same issue was with the demux: The ~ combinator only selects elements that come after the referenced element in the HTML. -->
+      <input type="checkbox" id="mux4-s1">
+      <label for="mux4-s1">S1</label>
+
+      <input type="checkbox" id="mux4-s0">
+      <label for="mux4-s0">S0</label>
+
+      <!-- Then data inputs -->
+      <input type="checkbox" id="mux4-d0">
+      <label for="mux4-d0">D0</label>
+
+      <input type="checkbox" id="mux4-d1">
+      <label for="mux4-d1">D1</label>
+
+      <input type="checkbox" id="mux4-d2">
+      <label for="mux4-d2">D2</label>
+
+      <input type="checkbox" id="mux4-d3">
+      <label for="mux4-d3">D3</label>
+
+      <!-- Then output -->
+      <div class="label">OUT</div>
+      <div class="lamp gate-mux4-out"></div>
+    </div>
+  </div>
+</body>
+</html>

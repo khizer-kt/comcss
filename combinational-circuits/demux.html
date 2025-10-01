@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DEMUX</title>
+  <link rel="stylesheet" href="../basic-logic-gates/gates.css">
+  <link rel="stylesheet" href="combinational.css">
+  <style>
+    .label { margin-top: 16px; }
+    .section { margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <h2>DEMUX</h2>
+
+  <div class="section">
+    <h3>1:2 DEMUX</h3>
+    <div class="circuit">
+      <!-- Select FIRST -->
+      <input type="checkbox" id="demux2-s">
+      <label for="demux2-s">Select (S)</label>
+
+      <!-- Then input -->
+      <input type="checkbox" id="demux2-din">
+      <label for="demux2-din">DIN</label>
+
+      <!-- Then outputs -->
+      <div class="label">Y0</div>
+      <div class="lamp gate-demux12-y0"></div>
+
+      <div class="label">Y1</div>
+      <div class="lamp gate-demux12-y1"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>1:4 DEMUX</h3>
+    <div class="circuit">
+      
+      <input type="checkbox" id="demux4-s1">
+      <label for="demux4-s1">S1</label>
+
+      <input type="checkbox" id="demux4-s0">
+      <label for="demux4-s0">S0</label>
+
+      <!-- Then input -->
+      <input type="checkbox" id="demux4-din">
+      <label for="demux4-din">DIN</label>
+
+      <!-- Then outputs -->
+      <div class="label">Y0</div>
+      <div class="lamp gate-demux14-y0"></div>
+
+      <div class="label">Y1</div>
+      <div class="lamp gate-demux14-y1"></div>
+
+      <div class="label">Y2</div>
+      <div class="lamp gate-demux14-y2"></div>
+
+      <div class="label">Y3</div>
+      <div class="lamp gate-demux14-y3"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.lamp {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: gray;
+  margin-top: 20px;
+}
+
+/* AND gate: lamp on only when both A and B are checked */
+#a:checked ~ #b:checked ~ .gate-and.lamp,
+#a:checked ~ #b:checked ~ .gate-and .lamp {
+  background: #00FF00; /* digital green */
+}
+
+/* OR gate: lamp on when either A or B is checked */
+#a:checked ~ .gate-or.lamp,
+#b:checked ~ .gate-or.lamp,
+#a:checked ~ .gate-or .lamp,
+#b:checked ~ .gate-or .lamp {
+  background: #00FF00;
+}
+
+/* NOT gate: lamp on when A is NOT checked */
+#a:not(:checked) ~ .gate-not.lamp,
+#a:not(:checked) ~ .gate-not .lamp {
+  background: #00FF00;
+}
+
+/* NAND gate: lamp on unless both A and B are checked */
+#a:checked ~ #b:not(:checked) ~ .gate-nand.lamp,
+#a:not(:checked) ~ #b:checked ~ .gate-nand.lamp,
+#a:not(:checked) ~ #b:not(:checked) ~ .gate-nand.lamp,
+#a:checked ~ #b:not(:checked) ~ .gate-nand .lamp,
+#a:not(:checked) ~ #b:checked ~ .gate-nand .lamp,
+#a:not(:checked) ~ #b:not(:checked) ~ .gate-nand .lamp {
+  background: #00FF00;
+}
+
+/* NOR gate: lamp on only when both A and B are NOT checked */
+#a:not(:checked) ~ #b:not(:checked) ~ .gate-nor.lamp,
+#a:not(:checked) ~ #b:not(:checked) ~ .gate-nor .lamp {
+  background: #00FF00;
+}
+
+/* XOR gate: lamp on when exactly one of A or B is checked */
+#a:checked ~ #b:not(:checked) ~ .gate-xor.lamp,
+#a:not(:checked) ~ #b:checked ~ .gate-xor.lamp,
+#a:checked ~ #b:not(:checked) ~ .gate-xor .lamp,
+#a:not(:checked) ~ #b:checked ~ .gate-xor .lamp {
+  background: #00FF00;
+}

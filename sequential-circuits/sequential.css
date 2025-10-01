@@ -1,0 +1,21 @@
+/* SR Latch (NOR-based) using CSS-only approximation
+   Inputs: #sr-s, #sr-r, #sr-prevq
+   Outputs: .gate-sr-q, .gate-sr-qbar */
+
+/* Set: S=1, R=0 -> Q=1, Q̅=0 */
+#sr-s:checked ~ #sr-r:not(:checked) ~ .gate-sr-q.lamp,
+#sr-s:checked ~ #sr-r:not(:checked) ~ .gate-sr-q .lamp { background: #00FF00; }
+
+/* Reset: S=0, R=1 -> Q=0, Q̅=1 */
+#sr-s:not(:checked) ~ #sr-r:checked ~ .gate-sr-qbar.lamp,
+#sr-s:not(:checked) ~ #sr-r:checked ~ .gate-sr-qbar .lamp { background: #00FF00; }
+
+/* Hold: S=0, R=0 -> Q follows PrevQ, Q̅ is inverse */
+#sr-s:not(:checked) ~ #sr-r:not(:checked) ~ #sr-prevq:checked ~ .gate-sr-q.lamp,
+#sr-s:not(:checked) ~ #sr-r:not(:checked) ~ #sr-prevq:checked ~ .gate-sr-q .lamp { background: #00FF00; }
+
+#sr-s:not(:checked) ~ #sr-r:not(:checked) ~ #sr-prevq:not(:checked) ~ .gate-sr-qbar.lamp,
+#sr-s:not(:checked) ~ #sr-r:not(:checked) ~ #sr-prevq:not(:checked) ~ .gate-sr-qbar .lamp { background: #00FF00; }
+
+/* Invalid: S=1, R=1 -> both off (no green) */
+

@@ -1,0 +1,168 @@
+/* Full Adder selectors (inputs: #a, #b, #cin) */
+#a:checked ~ #b:not(:checked) ~ #cin:not(:checked) ~ .gate-fa-sum.lamp,
+#a:not(:checked) ~ #b:checked ~ #cin:not(:checked) ~ .gate-fa-sum.lamp,
+#a:not(:checked) ~ #b:not(:checked) ~ #cin:checked ~ .gate-fa-sum.lamp,
+#a:checked ~ #b:checked ~ #cin:checked ~ .gate-fa-sum.lamp,
+#a:checked ~ #b:not(:checked) ~ #cin:not(:checked) ~ .gate-fa-sum .lamp,
+#a:not(:checked) ~ #b:checked ~ #cin:not(:checked) ~ .gate-fa-sum .lamp,
+#a:not(:checked) ~ #b:not(:checked) ~ #cin:checked ~ .gate-fa-sum .lamp,
+#a:checked ~ #b:checked ~ #cin:checked ~ .gate-fa-sum .lamp {
+  background: #00FF00; /* digital green */
+}
+
+#a:checked ~ #b:checked ~ .gate-fa-carry.lamp,
+#a:checked ~ #cin:checked ~ .gate-fa-carry.lamp,
+#b:checked ~ #cin:checked ~ .gate-fa-carry.lamp,
+#a:checked ~ #b:checked ~ .gate-fa-carry .lamp,
+#a:checked ~ #cin:checked ~ .gate-fa-carry .lamp,
+#b:checked ~ #cin:checked ~ .gate-fa-carry .lamp {
+  background: #00FF00;
+}
+
+/* ================= 2-bit Comparator (inputs: #a1, #b1, #a0, #b0) ================= */
+/* Equal when both bit pairs are equal */
+#a1:not(:checked) ~ #b1:not(:checked) ~ #a0:not(:checked) ~ #b0:not(:checked) ~ .gate-cmp2-eq.lamp,
+#a1:not(:checked) ~ #b1:not(:checked) ~ #a0:not(:checked) ~ #b0:not(:checked) ~ .gate-cmp2-eq .lamp,
+#a1:not(:checked) ~ #b1:not(:checked) ~ #a0:checked ~ #b0:checked ~ .gate-cmp2-eq.lamp,
+#a1:not(:checked) ~ #b1:not(:checked) ~ #a0:checked ~ #b0:checked ~ .gate-cmp2-eq .lamp,
+#a1:checked ~ #b1:checked ~ #a0:not(:checked) ~ #b0:not(:checked) ~ .gate-cmp2-eq.lamp,
+#a1:checked ~ #b1:checked ~ #a0:not(:checked) ~ #b0:not(:checked) ~ .gate-cmp2-eq .lamp,
+#a1:checked ~ #b1:checked ~ #a0:checked ~ #b0:checked ~ .gate-cmp2-eq.lamp,
+#a1:checked ~ #b1:checked ~ #a0:checked ~ #b0:checked ~ .gate-cmp2-eq .lamp {
+  background: #00FF00;
+}
+
+/* ================= 2:1 MUX ================= */
+#mux2-s:not(:checked) ~ #mux2-d0:checked ~ .gate-mux2-out.lamp,
+#mux2-s:not(:checked) ~ #mux2-d0:checked ~ .gate-mux2-out .lamp,
+#mux2-s:checked ~ #mux2-d1:checked ~ .gate-mux2-out.lamp,
+#mux2-s:checked ~ #mux2-d1:checked ~ .gate-mux2-out .lamp {
+  background: #00FF00;
+}
+
+/* ================= 1:2 DEMUX ================= */
+#demux2-s:not(:checked) ~ #demux2-din:checked ~ .gate-demux12-y0.lamp,
+#demux2-s:not(:checked) ~ #demux2-din:checked ~ .gate-demux12-y0 .lamp {
+  background: #00FF00;
+}
+#demux2-s:checked ~ #demux2-din:checked ~ .gate-demux12-y1.lamp,
+#demux2-s:checked ~ #demux2-din:checked ~ .gate-demux12-y1 .lamp {
+  background: #00FF00;
+}
+
+/* ================= 4:1 MUX ================= */
+#mux4-s1:not(:checked) ~ #mux4-s0:not(:checked) ~ #mux4-d0:checked ~ .gate-mux4-out.lamp,
+#mux4-s1:not(:checked) ~ #mux4-s0:not(:checked) ~ #mux4-d0:checked ~ .gate-mux4-out .lamp,
+#mux4-s1:not(:checked) ~ #mux4-s0:checked ~ #mux4-d1:checked ~ .gate-mux4-out.lamp,
+#mux4-s1:not(:checked) ~ #mux4-s0:checked ~ #mux4-d1:checked ~ .gate-mux4-out .lamp,
+#mux4-s1:checked ~ #mux4-s0:not(:checked) ~ #mux4-d2:checked ~ .gate-mux4-out.lamp,
+#mux4-s1:checked ~ #mux4-s0:not(:checked) ~ #mux4-d2:checked ~ .gate-mux4-out .lamp,
+#mux4-s1:checked ~ #mux4-s0:checked ~ #mux4-d3:checked ~ .gate-mux4-out.lamp,
+#mux4-s1:checked ~ #mux4-s0:checked ~ #mux4-d3:checked ~ .gate-mux4-out .lamp {
+  background: #00FF00;
+}
+
+/* ================= 1:4 DEMUX ================= */
+#demux4-s1:not(:checked) ~ #demux4-s0:not(:checked) ~ #demux4-din:checked ~ .gate-demux14-y0.lamp,
+#demux4-s1:not(:checked) ~ #demux4-s0:not(:checked) ~ #demux4-din:checked ~ .gate-demux14-y0 .lamp {
+  background: #00FF00;
+}
+#demux4-s1:not(:checked) ~ #demux4-s0:checked ~ #demux4-din:checked ~ .gate-demux14-y1.lamp,
+#demux4-s1:not(:checked) ~ #demux4-s0:checked ~ #demux4-din:checked ~ .gate-demux14-y1 .lamp {
+  background: #00FF00;
+}
+#demux4-s1:checked ~ #demux4-s0:not(:checked) ~ #demux4-din:checked ~ .gate-demux14-y2.lamp,
+#demux4-s1:checked ~ #demux4-s0:not(:checked) ~ #demux4-din:checked ~ .gate-demux14-y2 .lamp {
+  background: #00FF00;
+}
+#demux4-s1:checked ~ #demux4-s0:checked ~ #demux4-din:checked ~ .gate-demux14-y3.lamp,
+#demux4-s1:checked ~ #demux4-s0:checked ~ #demux4-din:checked ~ .gate-demux14-y3 .lamp {
+  background: #00FF00;
+}
+
+/* Greater when (a1> b1) or (a1==b1 and a0 > b0) */
+/* a1 > b1 */
+#a1:checked ~ #b1:not(:checked) ~ .gate-cmp2-gt.lamp,
+#a1:checked ~ #b1:not(:checked) ~ .gate-cmp2-gt .lamp,
+/* a1 == b1 and a0 > b0: handle both a1=b1=0 and a1=b1=1 */
+#a1:not(:checked) ~ #b1:not(:checked) ~ #a0:checked ~ #b0:not(:checked) ~ .gate-cmp2-gt.lamp,
+#a1:not(:checked) ~ #b1:not(:checked) ~ #a0:checked ~ #b0:not(:checked) ~ .gate-cmp2-gt .lamp,
+#a1:checked ~ #b1:checked ~ #a0:checked ~ #b0:not(:checked) ~ .gate-cmp2-gt.lamp,
+#a1:checked ~ #b1:checked ~ #a0:checked ~ #b0:not(:checked) ~ .gate-cmp2-gt .lamp {
+  background: #00FF00;
+}
+
+/* Less when (a1 < b1) or (a1==b1 and a0 < b0) */
+/* a1 < b1 */
+#a1:not(:checked) ~ #b1:checked ~ .gate-cmp2-lt.lamp,
+#a1:not(:checked) ~ #b1:checked ~ .gate-cmp2-lt .lamp,
+/* a1 == b1 and a0 < b0: handle both a1=b1=0 and a1=b1=1 */
+#a1:not(:checked) ~ #b1:not(:checked) ~ #a0:not(:checked) ~ #b0:checked ~ .gate-cmp2-lt.lamp,
+#a1:not(:checked) ~ #b1:not(:checked) ~ #a0:not(:checked) ~ #b0:checked ~ .gate-cmp2-lt .lamp,
+#a1:checked ~ #b1:checked ~ #a0:not(:checked) ~ #b0:checked ~ .gate-cmp2-lt.lamp,
+#a1:checked ~ #b1:checked ~ #a0:not(:checked) ~ #b0:checked ~ .gate-cmp2-lt .lamp {
+  background: #00FF00;
+}
+
+
+
+/* ================= 3:8 DECODER (inputs: #dec38-a2, #dec38-a1, #dec38-a0) ================= */
+/* 000 -> Y0 */
+#dec38-a2:not(:checked) ~ #dec38-a1:not(:checked) ~ #dec38-a0:not(:checked) ~ .gate-dec38-y0.lamp,
+#dec38-a2:not(:checked) ~ #dec38-a1:not(:checked) ~ #dec38-a0:not(:checked) ~ .gate-dec38-y0 .lamp { background: #00FF00; }
+/* 001 -> Y1 */
+#dec38-a2:not(:checked) ~ #dec38-a1:not(:checked) ~ #dec38-a0:checked ~ .gate-dec38-y1.lamp,
+#dec38-a2:not(:checked) ~ #dec38-a1:not(:checked) ~ #dec38-a0:checked ~ .gate-dec38-y1 .lamp { background: #00FF00; }
+/* 010 -> Y2 */
+#dec38-a2:not(:checked) ~ #dec38-a1:checked ~ #dec38-a0:not(:checked) ~ .gate-dec38-y2.lamp,
+#dec38-a2:not(:checked) ~ #dec38-a1:checked ~ #dec38-a0:not(:checked) ~ .gate-dec38-y2 .lamp { background: #00FF00; }
+/* 011 -> Y3 */
+#dec38-a2:not(:checked) ~ #dec38-a1:checked ~ #dec38-a0:checked ~ .gate-dec38-y3.lamp,
+#dec38-a2:not(:checked) ~ #dec38-a1:checked ~ #dec38-a0:checked ~ .gate-dec38-y3 .lamp { background: #00FF00; }
+/* 100 -> Y4 */
+#dec38-a2:checked ~ #dec38-a1:not(:checked) ~ #dec38-a0:not(:checked) ~ .gate-dec38-y4.lamp,
+#dec38-a2:checked ~ #dec38-a1:not(:checked) ~ #dec38-a0:not(:checked) ~ .gate-dec38-y4 .lamp { background: #00FF00; }
+/* 101 -> Y5 */
+#dec38-a2:checked ~ #dec38-a1:not(:checked) ~ #dec38-a0:checked ~ .gate-dec38-y5.lamp,
+#dec38-a2:checked ~ #dec38-a1:not(:checked) ~ #dec38-a0:checked ~ .gate-dec38-y5 
+.lamp { background: #00FF00; }
+/* 110 -> Y6 */
+#dec38-a2:checked ~ #dec38-a1:checked ~ #dec38-a0:not(:checked) ~ .gate-dec38-y6.lamp,
+#dec38-a2:checked ~ #dec38-a1:checked ~ #dec38-a0:not(:checked) ~ .gate-dec38-y6 .lamp { background: #00FF00; }
+/* 111 -> Y7 */
+#dec38-a2:checked ~ #dec38-a1:checked ~ #dec38-a0:checked ~ .gate-dec38-y7.lamp,
+#dec38-a2:checked ~ #dec38-a1:checked ~ #dec38-a0:checked ~ .gate-dec38-y7 .lamp { background: #00FF00; }
+
+/* ================= 8:3 ENCODER (inputs: #enc83-d0..#enc83-d7) ================= */
+/* D0 -> 000 (no lamp lit) */
+/* D1 -> 001 */
+#enc83-d1:checked ~ .gate-enc83-a0.lamp,
+#enc83-d1:checked ~ .gate-enc83-a0 .lamp { background: #00FF00; }
+/* D2 -> 010 */
+#enc83-d2:checked ~ .gate-enc83-a1.lamp,
+#enc83-d2:checked ~ .gate-enc83-a1 .lamp { background: #00FF00; }
+/* D3 -> 011 */
+#enc83-d3:checked ~ .gate-enc83-a1.lamp,
+#enc83-d3:checked ~ .gate-enc83-a1 .lamp,
+#enc83-d3:checked ~ .gate-enc83-a0.lamp,
+#enc83-d3:checked ~ .gate-enc83-a0 .lamp { background: #00FF00; }
+/* D4 -> 100 */
+#enc83-d4:checked ~ .gate-enc83-a2.lamp,
+#enc83-d4:checked ~ .gate-enc83-a2 .lamp { background: #00FF00; }
+/* D5 -> 101 */
+#enc83-d5:checked ~ .gate-enc83-a2.lamp,
+#enc83-d5:checked ~ .gate-enc83-a2 .lamp,
+#enc83-d5:checked ~ .gate-enc83-a0.lamp,
+#enc83-d5:checked ~ .gate-enc83-a0 .lamp { background: #00FF00; }
+/* D6 -> 110 */
+#enc83-d6:checked ~ .gate-enc83-a2.lamp,
+#enc83-d6:checked ~ .gate-enc83-a2 .lamp,
+#enc83-d6:checked ~ .gate-enc83-a1.lamp,
+#enc83-d6:checked ~ .gate-enc83-a1 .lamp { background: #00FF00; }
+/* D7 -> 111 */
+#enc83-d7:checked ~ .gate-enc83-a2.lamp,
+#enc83-d7:checked ~ .gate-enc83-a2 .lamp,
+#enc83-d7:checked ~ .gate-enc83-a1.lamp,
+#enc83-d7:checked ~ .gate-enc83-a1 .lamp,
+#enc83-d7:checked ~ .gate-enc83-a0.lamp,
+#enc83-d7:checked ~ .gate-enc83-a0 .lamp { background: #00FF00; }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SR Latch</title>
+  <link rel="stylesheet" href="../basic-logic-gates/gates.css">
+  <link rel="stylesheet" href="sequential.css">
+  <style>
+    .label { margin-top: 16px; }
+    .section { margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <h2>SR Latch</h2>
+  Well this sucks, 1st bump with css only.
+  <div class="section">
+    <h3>Inputs</h3>
+    <div class="circuit">
+      <!-- Inputs (S, R) and a manual PrevQ to emulate feedback state in pure CSS) -->
+      <input type="checkbox" id="sr-s">
+      <label for="sr-s">S (Set)</label>
+
+      <input type="checkbox" id="sr-r">
+      <label for="sr-r">R (Reset)</label>
+
+      <input type="checkbox" id="sr-prevq">
+      <label for="sr-prevq">Prev Q (hold state)</label>
+
+      <!-- Outputs -->
+      <div class="label">Q</div>
+      <div class="lamp gate-sr-q"></div>
+
+      <div class="label">Q̅</div>
+      <div class="lamp gate-sr-qbar"></div>
+    </div>
+  </div>
+</body>
+</html>
+
